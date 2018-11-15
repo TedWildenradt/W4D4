@@ -13,3 +13,35 @@
  *= require_tree .
  *= require_self
  */
+
+header {
+  height: 150px;
+  background-color: Grey;
+  display: float;
+  padding: 20px;
+  margin: 0;
+  /* flex-direction: column;
+  justify-content: space-between;
+  align-items: center; */
+}
+
+header h1 {
+  float: left;
+  height: inherit;
+  width: 400px
+}
+.login_buttons {
+  float: right;
+  height: inherit;
+
+}
+
+header:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+body {
+  width: 100%;
+}
