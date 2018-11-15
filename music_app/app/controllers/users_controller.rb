@@ -3,7 +3,7 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new(user_params)
-    debugger
+    # debugger
     if @user.save
       login(@user)
     else

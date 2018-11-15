@@ -10,6 +10,16 @@
   </head>
 
   <body>
+    <header>
+      <h1>Band MusicShare App</h1>
+      <div class="login_buttons">
+        <% if logged_in? %>
+          <%= button_to "Logout", session_url, :method => :delete %>
+        <% else %>
+          <%= button_to "Login", new_user_url, :method => :get %>
+        <% end %>
+      </div>
+    </header>
     <%= yield %>
   </body>
 </html>
