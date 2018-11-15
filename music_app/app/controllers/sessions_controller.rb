@@ -5,6 +5,7 @@ class SessionsController < ApplicationController
 
     if @user
       login(@user)
+      redirect_to bands_url
     else
       redirect_to new_session_url
     end

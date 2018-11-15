@@ -6,6 +6,7 @@ class UsersController < ApplicationController
     # debugger
     if @user.save
       login(@user)
+      redirect_to bands_url
     else
       flash.now[:errors]. << @user.errors.full_messages
       render :new
