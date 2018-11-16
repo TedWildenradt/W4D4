@@ -18,8 +18,19 @@
   <br>
 
   <label>
-    Live Album?
-    <input type="text">
+    Type of Album?
+    <input type="radio" name="album[live]" value="false">Studio
+    <input type="radio" name="album[live]" value="true">Live
+  </label>
+
+  <br>
+  <label>
+    Band
+    <select name="album[band_id]">
+      <% @bands.each do |band| %>
+      <option value="<%= band.id %>"><%= band.name %></option>
+      <% end %>
+    </select>
   </label>
 
   <br>
